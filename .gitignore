@@ -1,0 +1,53 @@
+/.idea/
+composer.lock
+
+/node_modules/
+
+/vendor/
+/wp/
+
+config/secure*
+
+/wp-content/*
+!/wp-content/index.php
+# If you develop custom plugins or themes, add them as gitkeep, e.g.:
+# !/wp-content/plugins/my-awesome-plugin
+# !/wp-content/themes/my-awesome-theme
+
+
+# ignore certain files
+*.pyc
+*.swp
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.7z
+
+# ignore compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.app
+*.o
+*.so
+
+
+# system files
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# ignore Sass cache
+.sass-cache
+
+# Operating system specific files
+.DS_Store
+
+# Files for local environment config
+/docker-compose.override.yml

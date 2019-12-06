@@ -1,0 +1,39 @@
+{
+	"name": "WordPress-Bootstrap-Template",
+	"version": "1.0.0",
+	"description": "A template project",
+	"engines": {
+		"node": "10.13.0",
+		"npm": "6.1.0"
+	},
+	"author": "Andy Thaller",
+	"devDependencies": {
+		"autoprefixer": "9.6.2",
+		"check-node-version": "4.0.1",
+		"dotenv": "8.1.0",
+		"wait-on": "3.3.0",
+		"webpack-dev-server": "3.8.2",
+		"webpack-livereload-plugin": "2.2.0"
+	},
+	"scripts": {
+		"build": "grunt build",
+		"build:dev": "grunt build --dev",
+		"dev": "grunt watch --dev",
+		"test": "grunt test",
+		"watch": "grunt watch",
+		"grunt": "grunt",
+		"env:start": "node ./tools/local-env/scripts/start.js",
+		"env:stop": "node ./tools/local-env/scripts/docker.js down",
+		"env:clean": "node ./tools/local-env/scripts/docker.js down -v --remove-orphans",
+		"env:reset": "node ./tools/local-env/scripts/docker.js down --rmi all -v --remove-orphans",
+		"env:install": "node ./tools/local-env/scripts/install.js",
+		"env:cli": "node ./tools/local-env/scripts/docker.js run cli",
+		"env:logs": "node ./tools/local-env/scripts/docker.js logs",
+		"env:pull": "node ./tools/local-env/scripts/docker.js pull",
+		"test:php": "node ./tools/local-env/scripts/docker.js run --rm phpunit phpunit",
+		"test:e2e": "node ./tests/e2e/run-tests.js"
+	},
+	"dependencies": {
+		"ncp": "2.0.0"
+	}
+}
